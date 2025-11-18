@@ -49,6 +49,3 @@
    show tables;
    select * from visits;
   ```
-
-
-
