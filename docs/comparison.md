@@ -8,7 +8,7 @@ There are two ways to run MySQL in the cloud: **self-hosted on a VM** or **manag
 
 - **Self-Hosted MySQL on Azure VM**
   - Launch a VM and install MySQL manually.
-  - Configure MySQL to listen on the correct network interface.
+  - Configure MySQL to listen on all interfaces (`bind-address = 0.0.0.0`).
   - Set up OS firewall rules and Azure NSG for port access.
   - Create users, set passwords, optionally configure SSL.
   - Time-consuming: requires several manual steps.
@@ -65,3 +65,9 @@ There are two ways to run MySQL in the cloud: **self-hosted on a VM** or **manag
 
 - **Self-hosted Azure VM** is like building your own house: full control, full responsibility, more work.
 - **Managed GCP MySQL** is like renting a fully serviced apartment: less control, but easier, faster, and safer for production.
+
+---
+
+#### Production Choice
+
+For production workloads, I would choose **GCP Managed MySQL**. The built-in backups, automatic updates, high availability options, and monitoring significantly reduce operational risk and maintenance effort, allowing the team to focus on development rather than infrastructure. While Azure VM provides full control, the additional setup and maintenance overhead makes it less practical for reliable, scalable production deployments.
